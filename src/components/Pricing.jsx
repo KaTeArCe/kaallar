@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Check, Sparkles } from "lucide-react";
 
+const phone = "50672261373";
+
 const plans = {
   launch: {
     name: "Launch",
@@ -38,6 +40,18 @@ const plans = {
 function Pricing() {
   const [active, setActive] = useState("growth");
   const plan = plans[active];
+
+  const openWhatsApp = () => {
+    const message = encodeURIComponent(
+      `¡Hola! Me interesa contratar el plan ${plan.name} para mi negocio.`
+    );
+
+    window.open(
+      `https://wa.me/${phone}?text=${message}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
 
   return (
     <section id="planes" className="bg-[#111111] py-28 text-white">
@@ -87,7 +101,7 @@ function Pricing() {
         {/* Tarjeta */}
         <div className="overflow-hidden rounded-[36px] border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl">
           <div className="grid lg:grid-cols-2">
-            {/* Lado izquierdo */}
+            {/* Izquierda */}
             <div className="p-10 lg:p-12">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#C8A45D]/30 bg-[#C8A45D]/10 px-4 py-2 text-sm text-[#C8A45D]">
                 <Sparkles size={14} />
@@ -100,10 +114,12 @@ function Pricing() {
                 {plan.price}
               </p>
 
-              <p className="leading-8 text-neutral-300">{plan.description}</p>
+              <p className="leading-8 text-neutral-300">
+                {plan.description}
+              </p>
             </div>
 
-            {/* Lado derecho */}
+            {/* Derecha */}
             <div className="border-t border-white/10 bg-black/20 p-10 lg:border-l lg:border-t-0 lg:p-12">
               <h4 className="mb-6 text-lg font-semibold">
                 Lo que incluye
@@ -121,7 +137,10 @@ function Pricing() {
                 ))}
               </div>
 
-              <button className="mt-10 w-full rounded-full bg-[#C8A45D] px-6 py-3 font-semibold text-black transition hover:scale-[1.02]">
+              <button
+                onClick={openWhatsApp}
+                className="mt-10 w-full rounded-full bg-[#C8A45D] px-6 py-3 font-semibold text-black transition hover:scale-[1.02]"
+              >
                 Solicitar este plan
               </button>
             </div>

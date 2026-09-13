@@ -35,7 +35,7 @@ function Navbar() {
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "border-b border-white/10 bg-black/80 backdrop-blur-xl"
+          ? "border-b border-white/10 bg-black/75 backdrop-blur-2xl"
           : "bg-transparent"
       }`}
     >
@@ -44,26 +44,43 @@ function Navbar() {
         <Link
           to="/"
           onClick={scrollToTop}
-          className="text-2xl font-semibold tracking-tight text-white transition hover:text-[#C8A45D]"
+          className="transition hover:opacity-80"
         >
-          kaallar
+          <h1
+            className="text-4xl font-normal italic text-white md:text-5xl"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            kaallar
+          </h1>
         </Link>
 
         {/* Menú escritorio */}
-        <nav className="hidden items-center gap-8 text-sm text-neutral-300 md:flex">
-          <a href="#servicios" className="transition hover:text-[#C8A45D]">
+        <nav className="hidden items-center gap-8 md:flex">
+          <a
+            href="#servicios"
+            className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
+          >
             Servicios
           </a>
 
-          <a href="#planes" className="transition hover:text-[#C8A45D]">
+          <a
+            href="#planes"
+            className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
+          >
             Planes
           </a>
 
-          <a href="#garantia" className="transition hover:text-[#C8A45D]">
+          <a
+            href="#garantia"
+            className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
+          >
             Garantía
           </a>
 
-          <a href="#contacto" className="transition hover:text-[#C8A45D]">
+          <a
+            href="#contacto"
+            className="text-base font-semibold tracking-wide text-neutral-300 transition hover:text-[#C8A45D]"
+          >
             Contacto
           </a>
         </nav>
@@ -71,7 +88,7 @@ function Navbar() {
         {/* Botón móvil */}
         <button
           onClick={() => setOpen(!open)}
-          className="rounded-full border border-white/10 p-2 text-white md:hidden"
+          className="rounded-full border border-white/10 p-2 text-white transition hover:border-[#C8A45D] md:hidden"
         >
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
@@ -79,21 +96,37 @@ function Navbar() {
 
       {/* Menú móvil */}
       {open && (
-        <div className="border-t border-white/10 bg-black/95 px-6 py-6 backdrop-blur-xl md:hidden">
-          <div className="flex flex-col gap-5 text-neutral-200">
-            <a href="#servicios" onClick={closeMenu}>
+        <div className="border-t border-white/10 bg-black/95 px-6 py-6 backdrop-blur-2xl md:hidden">
+          <div className="flex flex-col gap-5">
+            <a
+              href="#servicios"
+              onClick={closeMenu}
+              className="text-base font-semibold text-neutral-200"
+            >
               Servicios
             </a>
 
-            <a href="#planes" onClick={closeMenu}>
+            <a
+              href="#planes"
+              onClick={closeMenu}
+              className="text-base font-semibold text-neutral-200"
+            >
               Planes
             </a>
 
-            <a href="#garantia" onClick={closeMenu}>
+            <a
+              href="#garantia"
+              onClick={closeMenu}
+              className="text-base font-semibold text-neutral-200"
+            >
               Garantía
             </a>
 
-            <a href="#contacto" onClick={closeMenu}>
+            <a
+              href="#contacto"
+              onClick={closeMenu}
+              className="text-base font-semibold text-neutral-200"
+            >
               Contacto
             </a>
           </div>

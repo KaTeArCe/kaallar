@@ -25,7 +25,11 @@ function Footer() {
               Agencia Digital
             </p>
 
-            <h2 className="mb-5 text-5xl font-bold tracking-tight">
+            {/* Logo nuevo */}
+            <h2
+              className="mb-5 text-6xl font-normal italic leading-none text-white"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
               kaallar
             </h2>
 
