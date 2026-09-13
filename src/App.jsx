@@ -16,7 +16,7 @@ function Layout() {
   const isHome = location.pathname === "/";
 
   return (
-    <main className="bg-[#0D0D0D] text-white">
+    <main className="bg-[#0D0D0D] text-white min-h-screen">
       {isHome && <Navbar />}
 
       <Routes>

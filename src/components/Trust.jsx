@@ -1,60 +1,87 @@
 import { motion } from "framer-motion";
+import {
+  Smartphone,
+  Zap,
+  Palette,
+  MessageCircle,
+} from "lucide-react";
 
-const stats = [
+const features = [
   {
-    value: "100%",
-    label: "Responsive",
+    icon: Smartphone,
+    title: "100% Responsive",
+    text: "Perfecto en celular, tablet y computadora.",
   },
   {
-    value: "24 h",
-    label: "Tiempo de respuesta",
+    icon: Zap,
+    title: "Alta Velocidad",
+    text: "Sitios optimizados para cargar en segundos.",
   },
   {
-    value: "7 días",
-    label: "Soporte incluido",
+    icon: Palette,
+    title: "Diseño Premium",
+    text: "Cada proyecto es único, sin plantillas genéricas.",
+  },
+  {
+    icon: MessageCircle,
+    title: "WhatsApp Integrado",
+    text: "Convierte visitantes en conversaciones reales.",
   },
 ];
 
 function Trust() {
   return (
-    <section className="bg-[#111111] py-24">
+    <section className="bg-[#111111] py-24 text-white">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="rounded-[36px] border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-10 md:p-14"
+          className="rounded-[36px] border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-10 md:p-14 backdrop-blur-xl"
         >
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#C8A45D]">
-            kaallar
-          </p>
+          <div className="mb-14 text-center">
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#C8A45D]">
+              ¿Por qué kaallar?
+            </p>
 
-          <h2 className="max-w-3xl text-4xl font-bold leading-tight md:text-5xl">
-            Diseñado para generar confianza desde el primer clic.
-          </h2>
+            <h2 className="mb-6 text-4xl font-bold leading-tight md:text-5xl">
+              Diseñado para generar confianza desde el primer clic.
+            </h2>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-300">
-            Desarrollamos sitios rápidos, modernos y completamente personalizados
-            para empresas que quieren verse profesionales y convertir visitantes
-            en clientes.
-          </p>
+            <p className="mx-auto max-w-3xl text-lg leading-8 text-neutral-300">
+              Creamos experiencias digitales elegantes, rápidas y enfocadas en
+              convertir visitantes en clientes para negocios de Costa Rica.
+            </p>
+          </div>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {stats.map((item) => (
-              <div
-                key={item.label}
-                className="rounded-2xl border border-white/10 bg-black/30 p-6"
-              >
-                <h3 className="text-4xl font-bold text-[#C8A45D]">
-                  {item.value}
-                </h3>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {features.map((item, index) => {
+              const Icon = item.icon;
 
-                <p className="mt-3 text-neutral-300">
-                  {item.label}
-                </p>
-              </div>
-            ))}
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                  className="rounded-2xl border border-white/10 bg-black/30 p-6 transition duration-300 hover:border-[#C8A45D]/40 hover:bg-black/40"
+                >
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#C8A45D]/10">
+                    <Icon size={26} className="text-[#C8A45D]" />
+                  </div>
+
+                  <h3 className="mb-3 text-xl font-semibold">
+                    {item.title}
+                  </h3>
+
+                  <p className="leading-7 text-neutral-400">
+                    {item.text}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </div>

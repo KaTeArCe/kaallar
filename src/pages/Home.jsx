@@ -13,11 +13,11 @@ function Home() {
       <Hero />
       <Trust />
       <Services />
+      <Gallery />
+      <Testimonials />
       <Pricing />
       <Guarantee />
       <Footer />
-      <Gallery />
-      <Testimonials />
     </>
   );
 }

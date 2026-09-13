@@ -18,6 +18,19 @@ function Navbar() {
 
   const closeMenu = () => setOpen(false);
 
+  const scrollToTop = (e) => {
+    if (!isHome) return;
+
+    e.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    closeMenu();
+  };
+
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
@@ -30,36 +43,29 @@ function Navbar() {
         {/* Logo */}
         <Link
           to="/"
-          className="text-2xl font-semibold tracking-tight text-white"
+          onClick={scrollToTop}
+          className="text-2xl font-semibold tracking-tight text-white transition hover:text-[#C8A45D]"
         >
           kaallar
         </Link>
 
         {/* Menú escritorio */}
         <nav className="hidden items-center gap-8 text-sm text-neutral-300 md:flex">
-          {isHome ? (
-            <>
-              <a href="#servicios" className="transition hover:text-[#C8A45D]">
-                Servicios
-              </a>
+          <a href="#servicios" className="transition hover:text-[#C8A45D]">
+            Servicios
+          </a>
 
-              <a href="#planes" className="transition hover:text-[#C8A45D]">
-                Planes
-              </a>
+          <a href="#planes" className="transition hover:text-[#C8A45D]">
+            Planes
+          </a>
 
-              <a href="#garantia" className="transition hover:text-[#C8A45D]">
-                Garantía
-              </a>
+          <a href="#garantia" className="transition hover:text-[#C8A45D]">
+            Garantía
+          </a>
 
-              <a href="#contacto" className="transition hover:text-[#C8A45D]">
-                Contacto
-              </a>
-            </>
-          ) : (
-            <Link to="/" className="transition hover:text-[#C8A45D]">
-              ← Volver al inicio
-            </Link>
-          )}
+          <a href="#contacto" className="transition hover:text-[#C8A45D]">
+            Contacto
+          </a>
         </nav>
 
         {/* Botón móvil */}
@@ -72,7 +78,7 @@ function Navbar() {
       </div>
 
       {/* Menú móvil */}
-      {open && isHome && (
+      {open && (
         <div className="border-t border-white/10 bg-black/95 px-6 py-6 backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-5 text-neutral-200">
             <a href="#servicios" onClick={closeMenu}>

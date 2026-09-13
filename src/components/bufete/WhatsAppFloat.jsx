@@ -1,0 +1,29 @@
+import { MessageCircle } from "lucide-react";
+
+function WhatsAppFloat() {
+  const phone = "50672261373";
+
+  const message = encodeURIComponent(
+    "¡Hola! Vi la demostración del Bufete Atlas desarrollada por kaallar y me gustaría una cotización para mi negocio."
+  );
+
+  const openWhatsApp = () => {
+    window.open(
+      `https://wa.me/${phone}?text=${message}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
+  return (
+    <button
+      onClick={openWhatsApp}
+      className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition duration-300 hover:scale-110"
+      aria-label="WhatsApp"
+    >
+      <MessageCircle size={30} />
+    </button>
+  );
+}
+
+export default WhatsAppFloat;

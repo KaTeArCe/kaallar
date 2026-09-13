@@ -13,7 +13,6 @@ function Services() {
       className="bg-[#0D0D0D] py-28"
     >
       <div className="mx-auto max-w-7xl px-6">
-
         <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#C8A45D]">
           Servicios
         </p>
@@ -28,53 +27,55 @@ function Services() {
         </p>
 
         <div className="grid gap-8 md:grid-cols-2">
-
+          {/* Disponible */}
           <ServiceCard
             title="Cafés & Restaurantes"
             description="Menú digital, galería, horarios, Google Maps y WhatsApp."
-            price="₡80.000"
+            price="Desde ₡80.000"
             image={cafe}
             href="/cafe"
+            available={true}
           />
 
+          {/* Próximamente */}
           <ServiceCard
             title="Bufetes"
             description="Imagen corporativa, servicios legales y consultas online."
-            price="₡100.000"
+            price="Desde ₡100.000"
             image={bufete}
             href="/bufete"
+            available={false}
           />
 
           <ServiceCard
-            title="Clínicas"
+            title="Clínicas Dentales"
             description="Tratamientos, doctores, testimonios y agenda de citas."
-            price="₡95.000"
+            price="Desde ₡95.000"
             image={clinica}
             href="/clinica"
+            available={false}
           />
 
           <ServiceCard
             title="Salones & Barberías"
             description="Galería de trabajos, reservas y promociones."
-            price="₡80.000"
+            price="Desde ₡80.000"
             image={salon}
             href="/salon"
+            available={false}
           />
 
           <div className="md:col-span-2">
-
             <ServiceCard
               title="Tiendas Online"
               description="Carrito de compras, pagos, inventario y panel administrativo."
-              price="₡250.000"
+              price="Desde ₡250.000"
               image={tienda}
               href="/tienda"
+              available={false}
             />
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
