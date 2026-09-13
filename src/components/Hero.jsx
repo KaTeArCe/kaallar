@@ -14,13 +14,12 @@ function Hero() {
           </p>
 
           <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl">
-            Sitios web que hacen crecer empresas.
+            Sitios web que inspiran confianza y generan clientes.
           </h1>
 
           <p className="mb-10 max-w-xl text-lg leading-8 text-neutral-300">
-            En kaallar diseñamos páginas web modernas, rápidas y totalmente
-            personalizadas para negocios que quieren transmitir confianza y generar
-            más clientes.
+            Diseño web premium para cafeterías, clínicas, bufetes, salones y negocios que
+            quieren crecer con una presencia digital profesional.
           </p>
 
           <div className="flex flex-wrap gap-4">

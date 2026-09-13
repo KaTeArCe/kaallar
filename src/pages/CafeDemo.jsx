@@ -1,8 +1,32 @@
+import CafeNavbar from "../components/cafe/CafeNavbar";
+import CafeHero from "../components/cafe/CafeHero";
+import CafeStats from "../components/cafe/CafeStats";
+import CafeAbout from "../components/cafe/CafeAbout";
+import CafeMenu from "../components/cafe/CafeMenu";
+import CafeGallery from "../components/cafe/CafeGallery";
+import CafeTestimonials from "../components/cafe/CafeTestimonials";
+import CafeWhyUs from "../components/cafe/CafeWhyUs";
+import CafeHours from "../components/cafe/CafeHours";
+import CafeInstagram from "../components/cafe/CafeInstagram";
+import CafeFooter from "../components/cafe/CafeFooter";
+import WhatsAppFloat from "../components/cafe/WhatsAppFloat";
+
 function CafeDemo() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#0D0D0D] text-white">
-      <h1 className="text-5xl font-bold">Demo Café</h1>
-    </main>
+    <>
+      <CafeNavbar />
+      <CafeHero />
+      <CafeStats />
+      <CafeAbout />
+      <CafeMenu />
+      <CafeGallery />
+      <CafeTestimonials />
+      <CafeWhyUs />
+      <CafeHours />
+      <CafeInstagram />
+      <CafeFooter />
+      <WhatsAppFloat />
+    </>
   );
 }
 

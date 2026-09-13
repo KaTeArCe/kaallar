@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 
 function ServiceCard({ title, description, price, image, href }) {
   return (
-    <motion.div>
-      <Link to={href}>
-        whileHover={{ y: -8 }}
-        transition={{ duration: 0.25 }}
-        className="group overflow-hidden rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl"
+    <motion.div
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.25 }}
+    >
+      <Link
+        to={href}
+        className="group block overflow-hidden rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-xl"
+      >
         <div className="aspect-[5/4] overflow-hidden">
           <img
             src={image}
