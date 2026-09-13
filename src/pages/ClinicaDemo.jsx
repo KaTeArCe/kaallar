@@ -1,8 +1,34 @@
+import ClinicaNavbar from "../components/clinica/ClinicaNavbar";
+import ClinicaHero from "../components/clinica/ClinicaHero";
+import ClinicaStats from "../components/clinica/ClinicaStats";
+import ClinicaAbout from "../components/clinica/ClinicaAbout";
+import ClinicaServices from "../components/clinica/ClinicaServices";
+import ClinicaGallery from "../components/clinica/ClinicaGallery";
+import ClinicaTestimonials from "../components/clinica/ClinicaTestimonials";
+import ClinicaWhyUs from "../components/clinica/ClinicaWhyUs";
+import ClinicaHours from "../components/clinica/ClinicaHours";
+import ClinicaInstagram from "../components/clinica/ClinicaInstagram";
+import ClinicaFooter from "../components/clinica/ClinicaFooter";
+import WhatsAppFloat from "../components/clinica/WhatsAppFloat";
+import ClinicaTeam from "../components/clinica/ClinicaTeam";
+
 function ClinicaDemo() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#0D0D0D] text-white">
-      <h1 className="text-5xl font-bold">Demo Clínica</h1>
-    </main>
+    <>
+      <ClinicaNavbar />
+      <ClinicaHero />
+      <ClinicaStats />
+      <ClinicaAbout />
+      <ClinicaServices />
+      <ClinicaTeam />
+      <ClinicaGallery />
+      <ClinicaTestimonials />
+      <ClinicaWhyUs />
+      <ClinicaHours />
+      <ClinicaInstagram />
+      <ClinicaFooter />
+      <WhatsAppFloat />
+    </>
   );
 }
 
