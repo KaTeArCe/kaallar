@@ -1,8 +1,34 @@
+import SalonNavbar from "../components/salon/SalonNavbar";
+import SalonHero from "../components/salon/SalonHero";
+import SalonStats from "../components/salon/SalonStats";
+import SalonAbout from "../components/salon/SalonAbout";
+import SalonServices from "../components/salon/SalonServices";
+import SalonTeam from "../components/salon/SalonTeam";
+import SalonGallery from "../components/salon/SalonGallery";
+import SalonTestimonials from "../components/salon/SalonTestimonials";
+import SalonWhyUs from "../components/salon/SalonWhyUs";
+import SalonHours from "../components/salon/SalonHours";
+import SalonInstagram from "../components/salon/SalonInstagram";
+import SalonFooter from "../components/salon/SalonFooter";
+import WhatsAppFloat from "../components/salon/WhatsAppFloat";
+
 function SalonDemo() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#0D0D0D] text-white">
-      <h1 className="text-5xl font-bold">Demo Salón</h1>
-    </main>
+    <>
+      <SalonNavbar />
+      <SalonHero />
+      <SalonStats />
+      <SalonAbout />
+      <SalonServices />
+      <SalonTeam />
+      <SalonGallery />
+      <SalonTestimonials />
+      <SalonWhyUs />
+      <SalonHours />
+      <SalonInstagram />
+      <SalonFooter />
+      <WhatsAppFloat />
+    </>
   );
 }
 
